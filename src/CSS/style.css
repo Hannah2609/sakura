@@ -6,14 +6,23 @@
     --pink: #EEB8D3;
 
 /* typografi */
---fontsize-large-mobil: 80px;
+--fontsize-large-mobil: 40px;
 --fontsize-medium-mobil: 30px;
 --fontsize-small-mobil: 15px;
 
 
---fontsize-large-web: 120px;
+--fontsize-large-web: 60px;
 --fontsize-medium-web: 50px;
 --fontsize-small-web: 20px;
+}
+
+@font-face {
+    font-family: "hayamichi";
+    src: url(../font/hayamichi-font/Hayamichi-ow73q.ttf);
+}
+@font-face {
+    font-family: "montserrat";
+    src: url(../font/Montserrat-VariableFont_wght.ttf);
 }
 
 * {
@@ -27,20 +36,14 @@ body {
     font-family: montserrat;
 }
 
-@font-face {
-    font-family: "hayamichi";
-    src: url(../font/hayamichi-font/Hayamichi-ow73q.ttf);
-}
-@font-face {
-    font-family: "montserrat";
-    src: url(../font/Montserrat-VariableFont_wght.ttf);
-}
+
 
 /* mobilsize */
-@media (max-width: 800px) {   
+@media (max-width: 700px) {   
 h1 {
     font-size: var(--fontsize-large-mobil);
     font-family: hayamichi;
+    font-weight: 300;
 }
 h2 {
     font-size: var(--fontsize-medium-mobil);
@@ -52,15 +55,25 @@ h3 {
 p {
     font-size: var(--fontsize-small-mobil);
 }
+.knap a {
+color: var(--red);
+font-size: 20px;
+font-weight: 500;
+text-decoration: none;
+}
+.knap {
+    margin-top: 10%;
+}
 }
 
 
 
 /* desktop size */
-@media (min-width: 800px) { 
+@media (min-width: 700px) { 
 h1 {
     font-size: var(--fontsize-large-web);
     font-family: hayamichi;
+    font-weight: 400;
 }
 h2 {
     font-size: var(--fontsize-medium-web);
@@ -71,5 +84,11 @@ h3 {
 }
 p {
     font-size: var(--fontsize-small-web);
+}
+.knap a {
+color: var(--red);
+font-size: 25px;
+font-weight: 500;
+text-decoration: none;
 }
 }

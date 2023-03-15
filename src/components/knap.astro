@@ -1,0 +1,32 @@
+---
+import "../CSS/style.css";
+
+const { size} = Astro.props;
+---
+
+<button class="knap" data-size={size}>
+    <slot />
+</button>
+
+<style>
+@media (max-width: 800px){
+[data-size="large"] {
+border: solid 2px var(--red);
+border-radius: 50px;
+padding: 20px;
+}   
+
+}
+
+@media (min-width: 800px){
+[data-size="large"] {
+border: solid 2px var(--red);
+border-radius: 50px;
+padding: 20px;
+padding-inline: 40px;
+}   
+
+}
+
+
+</style>
