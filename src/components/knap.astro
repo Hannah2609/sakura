@@ -24,6 +24,12 @@ const { size } = Astro.props;
       border-radius: 50px;
       padding: 10px;
     }
+
+    [data-size="filter"] {
+      border: solid 2px var(--red);
+      border-radius: 50px;
+      padding: 5px;
+    }
   }
 
   @media (min-width: 800px) {
@@ -39,6 +45,11 @@ const { size } = Astro.props;
       border-radius: 50px;
       padding: 10px;
       padding-inline: 40px;
+    }
+    [data-size="filter"] {
+      border: solid 2px var(--red);
+      border-radius: 50px;
+      padding: 7px;
     }
   }
 

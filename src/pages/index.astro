@@ -5,6 +5,7 @@ import Infobanner from "../components/infobanner.astro";
 import Knap from "../components/knap.astro";
 import signuppic from "../img/signuppic.jpg";
 import signpic from "../img/signpic.png";
+import kort from "../img/kort.png";
 ---
 
 <html lang="en">
@@ -58,6 +59,12 @@ import signpic from "../img/signpic.png";
         <img src={signpic} alt="sakura dancing girls" />
       </div>
     </section>
+
+	<section class="location">
+		<h1>Festival location</h1>
+		<p>Langelinie Park, Nordre Toldbod, 1259 København K</p>
+	<img src={kort} alt="kort over festivallens lokation">
+	</section>
     <footer></footer>
   </body>
 
@@ -89,6 +96,10 @@ import signpic from "../img/signpic.png";
       .sign_up img {
         display: none;
       }
+	  .location img {
+		max-width: 100%;
+		border: solid 6px var(--pink);
+	  }
     }
 
     /* desktop */
@@ -125,6 +136,10 @@ import signpic from "../img/signpic.png";
 		justify-content: center;
 		align-items: center;
 	  }
+	  .location img {
+		max-width: 80%;
+		border: solid 6px var(--pink);
+	  }
     }
 
     .to_knapper {
@@ -152,6 +167,9 @@ import signpic from "../img/signpic.png";
 
 	.text_signup {
 		padding: 10%;
+	}
+	.location {
+		text-align: center;
 	}
   </style>
 </html>

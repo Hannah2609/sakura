@@ -1,0 +1,44 @@
+---
+import "../CSS/style.css";
+import Header from "../components/header.astro";
+import Knap from "../components/knap.astro";
+---
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+<body>
+        <Header />
+        
+    <main>
+        <h1>Program</h1>
+        <div class="filter">
+            <Knap size="filter"><a href="">Saved events</a></Knap>
+            <Knap size="filter"><a href="">Main stage</a></Knap>
+            <Knap size="filter"><a href="">Second stage</a></Knap>
+            <Knap size="filter"><a href="">On the lawn</a></Knap>
+        </div>
+
+        <!-- Search bar -->
+
+
+    </main>
+  
+</body>
+</html>
+
+<style>
+    .filter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+
+    }
+</style>
