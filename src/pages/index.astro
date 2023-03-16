@@ -13,19 +13,17 @@ import Knap from "../components/knap.astro";
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
   </head>
- 
-  <body> 
-	<Header />
-	<section class="hero">
 
-    <h1 class="hero_h1">Sakura Festival</h1>
-    <h2>Copenhagen 2023</h2> 
-	<div class="infobanner">
-      <Infobanner />
-    </div>
+  <body>
+    <Header />
+    <section class="hero">
+      <h1 class="hero_h1">Sakura Festival</h1>
+      <h2>Copenhagen 2023</h2>
+      <div class="infobanner">
+        <Infobanner />
+      </div>
+    </section>
 
-	</section>
-   
     <div class="knap_center">
       <Knap size="large"><a href="">Explore the 2023 pogram</a></Knap>
     </div>
@@ -33,10 +31,17 @@ import Knap from "../components/knap.astro";
     <section class="booths">
       <h1>Check out the booths</h1>
 
+	<div class="to_knapper">
+      <div class="knap_center">
+        <Knap size="small"><a href="">All booths</a></Knap>
+      </div>
+      <div class="knap_center">
+        <Knap size="small"><a href=""> Map </a></Knap>
+      </div>
+	</div>
     </section>
-  <footer></footer>
+    <footer></footer>
   </body>
-
 
   <style>
     /* mobil */
@@ -83,5 +88,15 @@ import Knap from "../components/knap.astro";
         text-align: center;
       }
     }
+	.to_knapper {
+		display: flex;
+		flex-direction: row;
+		align-items: baseline;
+		justify-content: center;
+		gap: 10%;
+		margin-top: 5%;
+	}
   </style>
+
+
 </html>
