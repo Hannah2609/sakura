@@ -28,12 +28,12 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    background-color: var(--bg-color);
 }
 
 body {
     color: var(--text-color);
     font-family: montserrat;
+    background-color: var(--bg-color);
 }
 
 

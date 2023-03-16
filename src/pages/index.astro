@@ -3,6 +3,8 @@ import "../CSS/style.css";
 import Header from "../components/header.astro";
 import Infobanner from "../components/infobanner.astro";
 import Knap from "../components/knap.astro";
+import signuppic from "../img/signuppic.jpg";
+import signpic from "../img/signpic.png";
 ---
 
 <html lang="en">
@@ -31,14 +33,30 @@ import Knap from "../components/knap.astro";
     <section class="booths">
       <h1>Check out the booths</h1>
 
-	<div class="to_knapper">
-      <div class="knap_center">
-        <Knap size="small"><a href="">All booths</a></Knap>
+      <div class="to_knapper">
+        <div class="knap_center">
+          <Knap size="small"><a href="">All booths</a></Knap>
+        </div>
+        <div class="knap_center">
+          <Knap size="small"><a href=""> Map</a></Knap>
+        </div>
       </div>
-      <div class="knap_center">
-        <Knap size="small"><a href=""> Map </a></Knap>
+    </section>
+
+    <section class="sign_up">
+      <div class="text_signup">
+        <h1 class="h1_red">Do you want to be a part of the festival?</h1>
+        <p>
+          Are you interested in participating in the festival as a booth-holder,
+          artist or any other connection? <br /><br /> Contact us at info@ch.mofa.go.jp
+          or
+        </p>
+        <Knap size="small"><a href=""> Sign Up</a></Knap>
       </div>
-	</div>
+
+      <div class="img_signup">
+        <img src={signpic} alt="sakura dancing girls" />
+      </div>
     </section>
     <footer></footer>
   </body>
@@ -61,10 +79,15 @@ import Knap from "../components/knap.astro";
         margin-bottom: 20%;
       }
       .knap_center {
-        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
       }
       .infobanner {
         margin-left: 5%;
+      }
+      .sign_up img {
+        display: none;
       }
     }
 
@@ -85,18 +108,50 @@ import Knap from "../components/knap.astro";
         margin-bottom: 10%;
       }
       .knap_center {
-        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
       }
-    }
-	.to_knapper {
+      .sign_up img {
+       max-height: 600px;
+      }
+	  .sign_up {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 2em;
+	  }
+	  .img_signup {
 		display: flex;
-		flex-direction: row;
-		align-items: baseline;
 		justify-content: center;
-		gap: 10%;
-		margin-top: 5%;
+		align-items: center;
+	  }
+    }
+
+    .to_knapper {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: center;
+      gap: 10%;
+      margin-top: 5%;
+    }
+    .sign_up {
+      background-color: #E8D0E1;
+      margin-top: 5%;
+      margin-bottom: 5%;
+    
+    }
+    .h1_red {
+      color: var(--red);
+      text-align: left;
+      margin-bottom: 5%;
+    }
+	  .sign_up p {
+		margin-bottom: 5%;
+	  }
+
+	.text_signup {
+		padding: 10%;
 	}
   </style>
-
-
 </html>

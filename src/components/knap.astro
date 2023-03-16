@@ -1,42 +1,51 @@
 ---
 import "../CSS/style.css";
 
-const { size} = Astro.props;
+const { size } = Astro.props;
 ---
 
 <button class="knap" data-size={size}>
-    <slot /> 
+  <slot />
+  <img
+    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAdUlEQVR4nO2TMQqAMAxF4+CJurRxtbmKi1XBk7h5oiZDjyTWSRxdTEHoO8B78EkAKpUiRMIgZJcM0HwuT8a04t0hhFkIN5VIJAxMeKpGxNvhjjDh/t8Iezc9Ebf+KyCaE4mmPGqeaSrxaELdyL2bVeSVCrxxAeHmYICElF3dAAAAAElFTkSuQmCC"
+  />
 </button>
 
 <style>
-@media (max-width: 800px){
-[data-size="large"] {
-border: solid 2px var(--red);
-border-radius: 50px;
-padding: 20px;
-}   
-[data-size="small"] {
-border: solid 2px var(--red);
-border-radius: 50px;
-padding: 10px;
-}  
+  @media (max-width: 800px) {
+    [data-size="large"] {
+      border: solid 2px var(--red);
+      border-radius: 50px;
+      padding: 20px;
+    }
 
-}
+    [data-size="small"] {
+      border: solid 2px var(--red);
+      border-radius: 50px;
+      padding: 10px;
+    }
+  }
 
-@media (min-width: 800px){
-[data-size="large"] {
-border: solid 2px var(--red);
-border-radius: 50px;
-padding: 20px;
-padding-inline: 40px;
-}   
-[data-size="small"] {
-border: solid 2px var(--red);
-border-radius: 50px;
-padding: 10px;
-padding-inline: 40px;
-}  
-}
+  @media (min-width: 800px) {
+    [data-size="large"] {
+      border: solid 2px var(--red);
+      border-radius: 50px;
+      padding: 20px;
+      padding-inline: 40px;
+    }
 
+    [data-size="small"] {
+      border: solid 2px var(--red);
+      border-radius: 50px;
+      padding: 10px;
+      padding-inline: 40px;
+    }
+  }
 
+  .knap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    }
 </style>
