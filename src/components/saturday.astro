@@ -1,0 +1,24 @@
+---
+import Card from "./card.astro";
+import "../CSS/style.css";
+
+const url = "https://sibqcdhthioufhaicwtr.supabase.co/rest/v1/Events_sakurafestival";
+
+const options = {
+  headers: {
+    apikey:
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNpYnFjZGh0aGlvdWZoYWljd3RyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg5NjY2NDIsImV4cCI6MTk5NDU0MjY0Mn0.ok8JScbWc_UQlhYc0UI3306aWJYFhl2a7zBfENidiSg",
+  },
+};
+
+const response = await fetch(url, options);
+const alleEvents = await response.json();
+---
+
+<article>
+  {
+    alleEvents.map((event) => (
+      <Card navn={event.name} arrangør={event.arrangør} tid={event.tidspunkt} />
+    ))
+  }
+</article>

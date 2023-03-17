@@ -36,7 +36,9 @@ body {
     background-color: var(--bg-color);
 }
 
-
+img {
+    max-width: 100%;
+}
 
 /* mobilsize */
 @media (max-width: 700px) {   
