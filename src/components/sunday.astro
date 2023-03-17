@@ -15,18 +15,14 @@ const response = await fetch(url, options);
 const alleEvents = await response.json();
 ---
 
+
 <section>
   {
-    alleEvents.map((event) => (
-      <Card navn={event.name} arrangør={event.arrangør} tid={event.tidspunkt} sted={event.placering} />
-    ))
+    alleEvents
+      .filter(event => event.dag.split(' ')[1] === 'Sunday') // keep only events that occur on Sunday
+      .map((event) => (
+        <Card navn={event.name} arrangør={event.arrangør} tid={event.tidspunkt} sted={event.placering} />
+      ))
   }
 </section>
 
-<style>
-    section {
-        display: flex;
-        overflow-x: scroll;
-        padding: 5%;
-    }
-</style>

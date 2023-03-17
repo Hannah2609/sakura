@@ -3,7 +3,8 @@ import "../CSS/style.css";
 import Header from "../components/header.astro";
 import Knap from "../components/knap.astro";
 import Card from "../components/card.astro";
-//import wadaiko from "/img/wadaiko.png";
+import Saturday from "../components/saturday.astro";
+import Sunday from "../components/sunday.astro";
 ---
 
 
@@ -28,9 +29,12 @@ import Card from "../components/card.astro";
         </div>
 
         <!-- Search bar -->
-
+        <h2>Saturday</h2>
         <Card billede="wadaiko.png" navn="sakura" arrangør="hej" tid="10:30" sted="main stage"/>
 
+        <h2>Sunday</h2>
+        <Saturday />
+        
     </main>
   
 </body>
