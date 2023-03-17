@@ -18,18 +18,30 @@ import Footer from "../components/footer.astro";
         <Header />
         
     <main>
-        <h1>About us</h1>
+        <h1 id="overskrift">About us</h1>
         
-        <img src="../img/pic_about.png" alt="">
+        <img class="mainpic" src="../img/pic_about.png" alt="">
+
+        <section class="tekst">
         <p>In Japan people love and admire Sakura blossom.</p> 
+      </section>
 
+      <section class="tekst2">
         <p>Almost everybody go out to enjoy its beauty together with families, friends, lovers, office-mates and so forth wherever and whenever Sakura bloom.</p> 
-          
+      </section>
+
+      <section class="tekst3">
         <p>Once a year Sakura connects people and people meet people under Sakura trees. It is also the utmost and fundamental goal of the Committee.</p>
+      </section>
 
-        <h2>See photos from earlier years</h2>
+        <section class="twopictures">
+        <img class="secondpic" src="../img/kvinde_about.png" alt="">
+        <img class="thirdpic" src="../img/trees_about.png" alt="">
+      </section>
 
-        <Knap size="small"><a href="">See photos</a></Knap>
+        <h1>See photos from earlier years</h1>
+
+        <Knap class="knap" size="small"><a href="">See photos</a></Knap>
     </main>
     <Footer />
 </body>
@@ -40,6 +52,51 @@ import Footer from "../components/footer.astro";
 <style>
 /* mobil */
  @media (max-width: 700px) {
+
+.mainpic{
+  width: 350px;
+  margin-top: 4%;
+  margin-left: 10%;
+  margin-bottom: 4%;
+}
+
+
+.secondpic{
+  width: 280px;
+  position: relative;
+  margin: 8%;
+  left: 15%
+}
+
+.thirdpic{
+  width: 150px;
+  position: absolute; 
+  left: 8%;
+}
+.knap {
+  margin-left: 100%;
+}
+
+.tekst{
+  margin-right: 5%;
+  margin-left: 10%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+.tekst2{
+  margin-right: 5%;
+  margin-left: 10%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+.tekst3{
+  margin-right: 5%;
+  margin-left: 10%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
 
  }
 
@@ -52,13 +109,14 @@ import Footer from "../components/footer.astro";
 
 img {
   max-width: 100%;
+  border: 4px solid var(--pink);
   border-radius: 50%; 
-  border: var(--pink);
 }
 
 /* Alt andet */
-h2{
-  font-size: 25px;
-  color: (var(--pink));
+
+#overskrift{color: black;}
+h1{
+  color: var(--red);
 }
 </style>
