@@ -2,7 +2,8 @@
 import Card from "./card.astro";
 import "../CSS/style.css";
 
-const url = "https://sibqcdhthioufhaicwtr.supabase.co/rest/v1/Events_sakurafestival";
+const url =
+  "https://sibqcdhthioufhaicwtr.supabase.co/rest/v1/Events_sakurafestival";
 
 const options = {
   headers: {
@@ -13,20 +14,40 @@ const options = {
 
 const response = await fetch(url, options);
 const alleEvents = await response.json();
+
+const filteredEvents = alleEvents.filter((event) => event.dag === "Saturday");
+filteredEvents.sort((a, b) => {
+
+  const aTime = new Date(`1970-01-01T${a.tidspunkt}`);
+  const bTime = new Date(`1970-01-01T${b.tidspunkt}`);
+
+ 
+  return aTime - bTime;
+});
 ---
 
 <section>
   {
-    alleEvents.map((event) => (
-      <Card billede="wadaiko.png" navn={event.name} arrangør={event.arrangør} tid={event.tidspunkt} sted={event.placering} />
+    filteredEvents.map((event) => (
+      <Card
+        billede="wadaiko.png"
+        navn={event.name}
+        arrangør={event.arrangør}
+        tid={new Date(`1970-01-01T${event.tidspunkt}`).toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: false,
+        })}
+        sted={event.placering}
+      />
     ))
   }
 </section>
 
 <style>
-    section {
-        display: flex;
-        overflow-x: scroll;
-        padding: 5%;
-    }
+  section {
+    display: flex;
+    overflow-x: scroll;
+    padding: 5%;
+  }
 </style>
