@@ -18,7 +18,7 @@ const alleEvents = await response.json();
 <section>
   {
     alleEvents.map((event) => (
-      <Card navn={event.name} arrangør={event.arrangør} tid={event.tidspunkt} sted={event.placering} />
+      <Card billede="wadaiko.png" navn={event.name} arrangør={event.arrangør} tid={event.tidspunkt} sted={event.placering} />
     ))
   }
 </section>
