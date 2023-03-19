@@ -3,10 +3,130 @@ import "../CSS/style.css"
 ---
 <footer>
 
+    <img class="venstre_blomstergren" src="/src/img/blomstergren.png" alt="Blomstergren">
+
+<section class="footer_menu">
+
+    <div class="adresse">
+        <h3>Festival adress</h3>
+        <a href="https://www.google.com/maps/place/Langelinie+Park,+Nordre+Toldbod,+1259+København/@55.6908489,12.597081,17z/data=!3m1!4b1!4m6!3m5!1s0x465252df6722ab2d:0xa3995aee90fb6778!8m2!3d55.6908066!4d12.5992868!16s%2Fg%2F11bc8xnwd6">
+            Langelinie Park,<br>Nordre Toldbod<br> 1259 København K</a>
+    </div>
+
+    <div class="kontakt">
+
+     <h3>Contact us</h3>
+        <p>c/o Embassy of <br>JapanHavneholmen 25, 9F. <br>1561 København V</p> <br>
+         <p>tlf: (+45) 3345 5121</p>
+        <p>fax: (+45) 3311 3377</p>
+        <p>email: info.cph@ch.mofa.go.jp</p>
+
+    </div>  
+
+    <div class="følg">
+        <h3>Follow</h3>
+        <img class="logo" src="src/img/logoer.png" alt="Facebook og Instagram">
+        <!-- <img class="instagram-logo" src="/src/img/insta-logo.png" alt="instagram">
+        <img class="facebook-logo" src="/src/img/facebook-logo.png" alt="facebook"> -->
+        </div>  
+
+    <div class="dato">
+        <h2>Sakura Festival</h2>
+        <p>22-23 april</p>
+    </div>
+</section>
+
+    <img class="højre_blomstergren" src="/src/img/blomstergren.png" alt="blomstergren">
+
 </footer>
 
 
 
+
 <style>
+footer{
+    background-color: var(--pink) ;
+    padding: 1px;
+    margin-top: 40px;
+    height: 20%;
+  
+}
+div{
+    margin:auto;
+    margin-top: 0;
+}
+.footer_menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+h3{
+    font-size: var(--fontsize-small-web);
+    font-family: "montserrat";
+    color: var(--red);
+    margin-bottom: 10px;
+    
+}
+
+h2{
+    font-size: 30px;
+    font-family: "hayamichi";
+}
+
+p{
+    font-size: 15px;
+    font-family: "montserrat";
+    color: white;
+
+}
+a{
+    font-size: 15px;
+    font-family: "montserrat";
+    color: white;
+}
+
+.følg{
+   text-align: center;
+}
+
+
+.dato p{
+    color: var(--red);
+    font-weight: bold;
+}
+@font-face {
+    font-family: "montserrat";
+    src: url(../font/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: "hayamichi";
+    src: url(../font/hayamichi-font/Hayamichi-ow73q.ttf);
+}
+
+img{
+    max-width: 100%;
+}
+.venstre_blomstergren{
+    width: 15%;
+    transform: rotate(180deg);
+    margin-bottom: -10%;
+}
+
+.højre_blomstergren{
+    width: 15%;
+    display: -webkit-box;
+    margin-left: auto;
+    margin-top:-10%;
+
+}
+
+.logo{
+    width: 20%;
+}
+
+
 
 </style>

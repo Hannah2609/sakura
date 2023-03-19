@@ -7,6 +7,7 @@ import Card from "../components/card.astro";
 import signpic from "../img/signpic.png";
 import kort from "../img/kort.png";
 import Blomst from "../components/blomst.astro";
+import Footer from "../components/footer.astro";
 ---
 
 <html lang="en">
@@ -20,9 +21,12 @@ import Blomst from "../components/blomst.astro";
 
   <body>
     <Header />
+    
     <section class="hero">
+      <img class="venstre_blomstergren" src="/src/img/blomstergren.png" alt="Blomstergren">
       <h1 class="hero_h1">Sakura Festival</h1>
       <h2>Copenhagen 2023</h2>
+      <img class="højre_blomstergren" src="/src/img/blomstergren.png" alt="Blomstergren">
       <div class="infobanner">
         <Infobanner />
       </div>
@@ -67,7 +71,7 @@ import Blomst from "../components/blomst.astro";
 		<p>Langelinie Park, Nordre Toldbod, 1259 København K</p>
 	<img src={kort} alt="kort over festivallens lokation">
 	</section>
-    <footer></footer>
+    <Footer />
   </body>
 
   <style>
@@ -173,5 +177,18 @@ import Blomst from "../components/blomst.astro";
 	.location {
 		text-align: center;
 	}
+
+  .venstre_blomstergren{
+    width: 30%;
+    transform: rotate(180deg);
+    margin-bottom: -25%;
+  }
+
+  .højre_blomstergren{
+    width: 30%;
+    display: -webkit-box;
+    margin-left: auto;
+    margin-top: -25%;
+  }
   </style>
 </html>
