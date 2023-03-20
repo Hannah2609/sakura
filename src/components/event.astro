@@ -22,25 +22,133 @@ const alleEvents = await response.json();
 
     <main>
       <div class="billede_div">
-        <img class="billede" src="/img/Billeder/wadaiko.png" alt="billede af event" />
+        <img class="billede" src={"/img/Billeder/" + billede } alt="billede af event" />
       </div>
       <div class="tekst">
-        <h1 class="h1">Navn</h1>
-        <h2 class="h2">Arrangør</h2>
+        <div class="navn-favorit">
+            <div class="navn">
+        <h1>{navn}</h1>
+        <h2 class="h2">{arrangør}</h2></div>
+        <img class="favorit" src="/img/heart-2.png" alt="favorit"></div>
 
         <div class="info">
           <div class="tid">
             <img
               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAABwElEQVR4nO2WvS8EURTFJ7RLReJjE/Et0Yt/QdASRKFkt6OQKLUaHVqNsIgEEaVWZDviD1BpfBU+lp/cOJNMNuy+NzNR7Ukm2Xnv3HPPvn333g2CGmpIAH7wAtwAp0AOyP63gXJ8ArtAR1pJhhwMjAArwFVk7QkYT5p8CfgC5ioZKFsbBi4jp5GPm3xSyb/+EvnNgNbrgbWICb+TAJqBewnktGYXrMVTZ1Uaj0CrT+C2Ao/0ntf7jY8JoA44U+yma1AnUALewpKypEoex0S/9D6AdpeAZSU6LFtPYqKguAUX8rnIE7/sxTIBzCrm2IV8J/LgH/veJoDekO9i4FXkxgqcqImig2YmbE4uBp5EbqjCMxNF4MJBs8HHwK3IfUFKAAakee1CPhV5KkUDMz6XMCfyTooGbDoa5l3IWTUNa0RdKSTvkZZbIzIAW3JcCBICOJDWhk9QW6QaFhOOc8OD7yALbIRqlJbimFDykjRGfeODyBQ0AcM+0B24/ebhsX+G4zw2gDHNc3SZ7EZPq7YzegZUanvAe+TY433zcgBNwLpucjUYZ9PrD4grrIysloET62rAsx77fKw9t1KroYbgB9/rekJhc2IbOgAAAABJRU5ErkJggg=="
             />
-            <p class={tid}>tid</p>
+            <h2>{tid}</h2>
           </div>
           <div class="lokation">
             <img
               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAACZUlEQVR4nL3XS4iOURgH8HdccptxHQ2zMc1KTMgUY9ZEFENpbJFSllhgTTZuhWQx2VjIZSHjtiBZUEIWFrNAyP1+qUH46TRH8/m8H9/7fjPzr1On5945z3Oe5yRJDqAac7E0rrCvzmMrE7AInfiiB91x/d4H3sL+cDwJF/EdR7EM4wr449EWeUHmAur6yvl0PMKNsC9Dvgk38RDTKnU+EQ9wGiMy6I3EGdxHbSUBnMJtjMqZqHdwPK/zVvzEnFwGemzMizZa8igfwdkSvNk4iWdxncCsErLn0ZHV+WC8xtoU3pJYhpewIa7LkbY4RX4dXmJQlgDqY203FdFr8AoHUVVAr8KhyKsp0pkRbU3OEkBzVPojg9GOr2lJGZPuG1YW0Wujrea+CGATuv6h1xVkUko5YHaWABqj0tQi+qp41yNK1H44nfaUhyygIWsSdmNFEX0M3mBPis7eyBudcm2fMyVhAK5hV1IELI93fQ6rsSbuA60tRX4/riRZga24V4LXEt4IfIyrM+3BitXxGBvzBDAt3t3MzMq9NsKcENCY10AXtlcQwO7QD5IKDGyOiZWnGY3Ge6yvJIAavAvPbQ7dLXiRpY2nAjtDMmJIBp3heIpt5er8bxz7lOUUYgWFZja2XJ1yDL7FhDJk6/Ahz7X970jDeLWvDNkO3M1yZWUhvoBh4m39h8yCOAHNT/oDOBYT8q9PSOwTYRI+3C/OC3r7cxxI0ke4J32WeKUQPyU/Cn9ABbT+OfpihGSML2SYG6bEktuRDBQwDNdxK/4brmLogAWQ9D5QodWGsbx+QJ0XBNGQadRKwS/sg2x+xeQUBAAAAABJRU5ErkJggg=="
             />
-            <p>{sted}</p>
+            <h2>{sted}</h2>
           </div>
         </div>
       </div>
     </main>
+
+    <style> 
+       @media (max-width: 700px) {
+   .billede_div {
+        text-align: center;
+        margin-bottom: 5%;
+    }
+    h2{
+        font-size: 20px;
+        margin-left: 5%;
+    }
+    .h2 {
+         margin-bottom: 10%;
+    }
+    h1 {
+        text-align: left;
+        margin-left: 5%
+    }
+    .info {
+        text-align: left;
+        margin-left: 5%;
+    }
+    .navn {
+        text-align: left;
+        margin-left: 5%;
+   
+    }
+    .favorit {
+        height: 50px;
+     }
+    .billede {
+       border: 8px solid var(--pink); 
+       border-radius: 50%;
+       width: 300px;
+       height: 300px;
+       object-fit: cover;
+    }
+    .tid {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5%;
+   
+     }
+     .lokation {
+        display: flex;
+        align-items: center;
+  
+     }
+     }
+
+
+     @media (min-width: 700px) {
+        .billede {
+       border: 8px solid var(--pink); 
+       border-radius: 50%;
+       width: 400px;
+       height: 400px;
+       object-fit: cover;
+    }
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4em;
+    }
+    h1 {
+        text-align: left;
+        margin-top: 5%;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    .h2 {
+        margin-bottom: 10%;
+    }
+    .billede_div {
+        text-align: right;
+    }
+    .tid {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5%;
+        gap: 1em;
+   
+     }
+     .lokation {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+  
+     }
+
+     }
+
+    
+     .navn-favorit {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2em;
+        margin-bottom: 10%;
+     }
+     main {
+        margin-top: 10%;
+     }
+    </style>
