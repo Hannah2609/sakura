@@ -2,6 +2,7 @@
 import "../CSS/style.css";
 import Header from "../components/header.astro";
 import Knap from "../components/knap.astro";
+import Footer from "../components/footer.astro";
 ---
 
 
@@ -17,34 +18,35 @@ import Knap from "../components/knap.astro";
         <Header />
         
     <main>
+      <img class="modsat_blomstergren" src="/img/blomst-modsat.png" alt="Blomstergren">
         <h1 id="overskrift">About us</h1>
-        
-        <img class="mainpic" src="/img/pic_about.png" alt="">
+      
+        <section class="main_grid">
+            <img class="mainpic" src="../img/pic_about.png" alt="">
+            <p style="line-height:150%;">In Japan people love and admire Sakura blossom. <br> <br> Almost everybody go out to enjoy its beauty together with families, friends, lovers, office-mates and so forth wherever and whenever Sakura bloom. <br> <br> Once a year Sakura connects people and people meet people under Sakura trees. It is also the utmost and fundamental goal of the Committee.</p>
+        </section>
 
-        <section class="tekst">
-        <p>In Japan people love and admire Sakura blossom.</p> 
-      </section>
+        <img class="højre_blomstergren" src="/img/blomstergren.png" alt="Blomstergren">
 
-      <section class="tekst2">
-        <p>Almost everybody go out to enjoy its beauty together with families, friends, lovers, office-mates and so forth wherever and whenever Sakura bloom.</p> 
-      </section>
+        <section class="second_grid">
 
-      <section class="tekst3">
-        <p>Once a year Sakura connects people and people meet people under Sakura trees. It is also the utmost and fundamental goal of the Committee.</p>
-      </section>
+          <section class="tekst">
+            <h1>See photos from earlier years</h1>
+            <Knap size="small"><a href="">See photos</a></Knap>
+          </section>
 
-        <section class="twopictures">
-        <img class="secondpic" src="/img/kvinde_about.png" alt="">
-        <img class="thirdpic" src="/img/trees_about.png" alt="">
-      </section>
+          <section class="billeder">
+            <img class="thirdpic" src="../img/trees_about.png" alt="">
+            <img class="secondpic" src="../img/kvinde_about.png" alt="">
+          </section>
 
-        <h1>See photos from earlier years</h1>
+        </section>
 
-        <Knap class="knap" size="small"><a href="">See photos</a></Knap>
-      <img src="/img/blomstergren.png" alt="Blomstergren">
-        <h1>About us</h1>
+        <img class="blomst" src="/img/blomst-modsat.png" alt="Blomstergren">
 
     </main>
+
+    <Footer/>
   
 </body>
 
@@ -53,12 +55,22 @@ import Knap from "../components/knap.astro";
 <style>
 /* mobil */
  @media (max-width: 700px) {
+  .modsat_blomstergren{
+    width: 60%;
+    position: absolute;
+    margin-top: 2%;
+    left: -5%;
+    z-index: -1;
+  }
 
 .mainpic{
-  width: 350px;
+  width: 80%;
   margin-top: 4%;
   margin-left: 10%;
   margin-bottom: 4%;
+  max-width: 100%;
+  border: 4px solid var(--pink);
+  border-radius: 50%; 
 }
 
 
@@ -66,37 +78,34 @@ import Knap from "../components/knap.astro";
   width: 280px;
   position: relative;
   margin: 8%;
-  left: 15%
+  left: 15%;
+  max-width: 100%;
+  border: 4px solid var(--pink);
+  border-radius: 50%; 
 }
 
 .thirdpic{
   width: 150px;
   position: absolute; 
   left: 8%;
+  max-width: 100%;
+  border: 4px solid var(--pink);
+  border-radius: 50%; 
 }
-.knap {
-  margin-left: 100%;
-}
-
 .tekst{
-  margin-right: 5%;
-  margin-left: 10%;
-  margin-top: 4%;
-  margin-bottom: 4%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 5%;
 }
-
-.tekst2{
-  margin-right: 5%;
-  margin-left: 10%;
-  margin-top: 4%;
-  margin-bottom: 4%;
+.tekst h1{
+    text-align: left;
+    margin-bottom: 10%;
 }
-
-.tekst3{
-  margin-right: 5%;
-  margin-left: 10%;
-  margin-top: 4%;
-  margin-bottom: 4%;
+.højre_blomstergren{
+  display: none;
+}
+.blomst{
+ display: none;
 }
 
  }
@@ -106,18 +115,93 @@ import Knap from "../components/knap.astro";
  /* computer */
  @media (min-width: 700px) {
 
+  .main_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top:10%;
+  
+  }
+
+  .second_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top:10%;
+    gap: 4em;
+    margin-bottom: 15%;
+    margin-top: 15%;
+  }
+
+  .mainpic{
+    width: 80%;
+    justify-self: center;
+    margin-top: -10%;
+    max-width: 100%;
+    border: 4px solid var(--pink);
+    border-radius: 50%; 
+  }
+
+  .modsat_blomstergren{
+    width: 30%;
+    position: absolute;
+    margin-top: -7%;
+    left: -10%;
+    z-index: -1;
+  }
+
+  .secondpic{
+    width: 60%;
+    max-width: 100%;
+    border: 4px solid var(--pink);
+    border-radius: 50%; 
+    position: absolute;
+    right: 0;
+  }
+  .thirdpic{
+    max-width: 100%;
+    border: 4px solid var(--pink);
+    border-radius: 50%; 
+    width: 40%;
+  }
+  .tekst{
+    margin-left: 15%;
+}
+.tekst h1{
+    text-align: left;
+    margin-bottom: 10%;
+}
+.billeder{
+  position: relative;
+  margin-right: 15%;
+}
+
+.højre_blomstergren{
+  width: 30%;
+  float: right;
+  margin-right: -10%;
+  margin-top: -15%;
+}
+
+.blomst{
+  width: 25%;
+  position: absolute;
+  left:-10%;
+  top: 135%;
+  z-index: -1;
+}
+
  }
 
-img {
-  max-width: 100%;
-  border: 4px solid var(--pink);
-  border-radius: 50%; 
-}
 
 /* Alt andet */
 
 #overskrift{color: black;}
 h1{
   color: var(--red);
+}
+main {
+  margin-inline: 5%;
+}
+p {
+  padding: 5%;
 }
 </style>
