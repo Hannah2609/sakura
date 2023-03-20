@@ -30,7 +30,7 @@ filteredEvents.sort((a, b) => {
   {
     filteredEvents.map((event) => (
       <Card
-        billede="wadaiko.png"
+        billede={event.image}
         navn={event.name}
         arrangør={event.arrangør}
         tid={new Date(`1970-01-01T${event.tidspunkt}`).toLocaleTimeString([], {
