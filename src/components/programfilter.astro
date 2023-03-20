@@ -1,0 +1,46 @@
+---
+import "../CSS/style.css"
+---
+<div class="section">
+<div class="filters">
+<button>
+    Saved events
+</button>
+<button>
+    Main stage
+</button>
+<button>
+    Second stage
+</button>
+<button>
+    On the lawn
+</button>
+</div>
+<div class="searchbar">
+    <input type="text" placeholder="Search..">
+</div>
+</div>
+
+<style>
+    @media (max-width:700px){
+       button {
+        padding: 10px;
+        color: var(--red);
+        font-size: 12px;
+    } 
+    }
+    
+     @media (min-width:700px){
+       button {
+        padding: 15px;
+        color: var(--red);
+        font-size: 15px;
+    } 
+    }
+
+    .section {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+</style>

@@ -5,6 +5,7 @@ import Knap from "../components/knap.astro";
 import Card from "../components/card.astro";
 import Saturday from "../components/saturday.astro";
 import Sunday from "../components/sunday.astro";
+import Programfilter from "../components/programfilter.astro";
 ---
 
 
@@ -22,10 +23,7 @@ import Sunday from "../components/sunday.astro";
     <main>
         <h1>Program</h1>
         <div class="filter">
-            <Knap size="filter"><a href="">Saved events</a></Knap>
-            <Knap size="filter"><a href="">Main stage</a></Knap>
-            <Knap size="filter"><a href="">Second stage</a></Knap>
-            <Knap size="filter"><a href="">On the lawn</a></Knap>
+           <Programfilter />
         </div>
 
         <!-- Search bar -->
