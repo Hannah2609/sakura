@@ -33,15 +33,11 @@ const alleEvents = await response.json();
 
         <div class="info">
           <div class="tid">
-            <img
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAABwElEQVR4nO2WvS8EURTFJ7RLReJjE/Et0Yt/QdASRKFkt6OQKLUaHVqNsIgEEaVWZDviD1BpfBU+lp/cOJNMNuy+NzNR7Ukm2Xnv3HPPvn333g2CGmpIAH7wAtwAp0AOyP63gXJ8ArtAR1pJhhwMjAArwFVk7QkYT5p8CfgC5ioZKFsbBi4jp5GPm3xSyb/+EvnNgNbrgbWICb+TAJqBewnktGYXrMVTZ1Uaj0CrT+C2Ao/0ntf7jY8JoA44U+yma1AnUALewpKypEoex0S/9D6AdpeAZSU6LFtPYqKguAUX8rnIE7/sxTIBzCrm2IV8J/LgH/veJoDekO9i4FXkxgqcqImig2YmbE4uBp5EbqjCMxNF4MJBs8HHwK3IfUFKAAakee1CPhV5KkUDMz6XMCfyTooGbDoa5l3IWTUNa0RdKSTvkZZbIzIAW3JcCBICOJDWhk9QW6QaFhOOc8OD7yALbIRqlJbimFDykjRGfeODyBQ0AcM+0B24/ebhsX+G4zw2gDHNc3SZ7EZPq7YzegZUanvAe+TY433zcgBNwLpucjUYZ9PrD4grrIysloET62rAsx77fKw9t1KroYbgB9/rekJhc2IbOgAAAABJRU5ErkJggg=="
-            />
+            <img src="/img/clock.png" alt="time">
             <h2>{tid}</h2>
           </div>
           <div class="lokation">
-            <img
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAACZUlEQVR4nL3XS4iOURgH8HdccptxHQ2zMc1KTMgUY9ZEFENpbJFSllhgTTZuhWQx2VjIZSHjtiBZUEIWFrNAyP1+qUH46TRH8/m8H9/7fjPzr1On5945z3Oe5yRJDqAac7E0rrCvzmMrE7AInfiiB91x/d4H3sL+cDwJF/EdR7EM4wr449EWeUHmAur6yvl0PMKNsC9Dvgk38RDTKnU+EQ9wGiMy6I3EGdxHbSUBnMJtjMqZqHdwPK/zVvzEnFwGemzMizZa8igfwdkSvNk4iWdxncCsErLn0ZHV+WC8xtoU3pJYhpewIa7LkbY4RX4dXmJQlgDqY203FdFr8AoHUVVAr8KhyKsp0pkRbU3OEkBzVPojg9GOr2lJGZPuG1YW0Wujrea+CGATuv6h1xVkUko5YHaWABqj0tQi+qp41yNK1H44nfaUhyygIWsSdmNFEX0M3mBPis7eyBudcm2fMyVhAK5hV1IELI93fQ6rsSbuA60tRX4/riRZga24V4LXEt4IfIyrM+3BitXxGBvzBDAt3t3MzMq9NsKcENCY10AXtlcQwO7QD5IKDGyOiZWnGY3Ge6yvJIAavAvPbQ7dLXiRpY2nAjtDMmJIBp3heIpt5er8bxz7lOUUYgWFZja2XJ1yDL7FhDJk6/Ahz7X970jDeLWvDNkO3M1yZWUhvoBh4m39h8yCOAHNT/oDOBYT8q9PSOwTYRI+3C/OC3r7cxxI0ke4J32WeKUQPyU/Cn9ABbT+OfpihGSML2SYG6bEktuRDBQwDNdxK/4brmLogAWQ9D5QodWGsbx+QJ0XBNGQadRKwS/sg2x+xeQUBAAAAABJRU5ErkJggg=="
-            />
+            <img src="/img/location-2.png" alt="pin">
             <h2>{sted}</h2>
           </div>
         </div>
@@ -150,5 +146,8 @@ const alleEvents = await response.json();
      }
      main {
         margin-top: 10%;
+     }
+     .tid {
+        margin-left: 4px;
      }
     </style>
