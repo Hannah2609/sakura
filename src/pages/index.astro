@@ -44,10 +44,10 @@ import Japansketegn from "../components/japansketegn.astro";
 
       <div class="to_knapper">
         <div class="knap_center">
-          <Knap size="small"><a href="">All booths</a></Knap>
+          <Knap class="knap" size="small"><a href="">All booths</a></Knap>
         </div>
         <div class="knap_center">
-          <Knap size="small"><a href=""> Map</a></Knap>
+          <Knap class="knap" size="small"><a href=""> Map</a></Knap>
         </div>
       </div>
     </section>
@@ -60,7 +60,7 @@ import Japansketegn from "../components/japansketegn.astro";
           artist or any other connection? <br /><br /> Contact us at info@ch.mofa.go.jp
           or
         </p>
-        <Knap size="small"><a href=""> Sign Up</a></Knap>
+        <Knap class="knap" size="small"><a href=""> Sign Up</a></Knap>
       </div>
 
       <div class="img_signup">
@@ -192,6 +192,9 @@ import Japansketegn from "../components/japansketegn.astro";
     display: -webkit-box;
     margin-left: auto;
     margin-top: -25%;
+  }
+  .knap:hover a{
+    color: white;
   }
   </style>
 </html>

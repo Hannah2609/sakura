@@ -97,3 +97,6 @@ text-decoration: none;
 }
 }
 
+.knap:hover a{
+    color: white;
+}
