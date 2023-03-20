@@ -6,7 +6,7 @@ import "../CSS/style.css"
 <button>
     Saved events
 </button>
-<button>
+<button class="aktuel">
     Main stage
 </button>
 <button>
@@ -17,7 +17,7 @@ import "../CSS/style.css"
 </button>
 </div>
 <div class="searchbar">
-    <input type="text" placeholder="Search..">
+    <input type="text" placeholder="Search for an event..">
 </div>
 </div>
 
@@ -25,22 +25,64 @@ import "../CSS/style.css"
     @media (max-width:700px){
        button {
         padding: 10px;
-        color: var(--red);
+        color: var(--text-color);
         font-size: 12px;
+        border: 2px solid var(--red);
+        padding-inline: 15px;
     } 
+    input {
+        border: 1px solid var(--red);
+        padding: 5px;
+    }
     }
     
      @media (min-width:700px){
        button {
-        padding: 15px;
-        color: var(--red);
+        border: 2px solid var(--red);
+        padding: 10px;
+        color: var(--text-color);
         font-size: 15px;
+        margin-inline: 5px;
+        padding-inline: 20px;
     } 
+    input {
+        padding: 10px;
     }
 
+    }
+    input {
+        border: 2px solid var(--red);
+        border-radius: 100px;
+        background-color: transparent;
+        width: 300px;
+
+    }
     .section {
         display: flex;
         flex-direction: column;
         align-content: center;
+        justify-content: center;
     }
+    .searchbar {
+        display: flex;
+        margin: 4%;
+        align-content: center;
+        justify-content: center;
+    }
+    button {
+        border-radius: 100px;
+        background-color: transparent;
+        margin-top: 5%;
+    }
+
+    .aktuel {
+        background-color: var(--red);
+        color: white;
+    }
+
+    button:hover {
+        background-color: var(--red);
+        color: white;
+    }
+    
 </style>
