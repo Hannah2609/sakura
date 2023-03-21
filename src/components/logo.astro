@@ -2,14 +2,39 @@
 import logo from '../img/logo.png'
 ---
 
+<a href="/">
 <div>
-    <img src={logo} alt="logo sakura festival">
+    <h1>Sakura Festival</h1>
+    <h2>22 - 23 April</h2>
+</div>
+</a>
+<style>
+
+    a {
+        text-decoration: none;
+
+    }
+    h1 {
+        font-size: 30px;
+        color: black;
+    }
+    h2 {
+        font-size: 20px;
+        text-align: center;
+        color: var(--red);
+        font-weight: 500;
+    }
+    
+</style>
+<!-- 
+<div>
+    <a href="/"><img src={logo} alt="logo sakura festival"></a>
 </div>
 
 <style>
 @media (max-width: 800px){
  img {
-        max-width: 100px;
+        max-width: 130px;
     }    
 }
 @media (min-width: 800px){
@@ -17,4 +42,4 @@ import logo from '../img/logo.png'
         max-width: 150px;
     }    
 }
-</style>
+</style> -->

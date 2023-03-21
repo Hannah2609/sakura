@@ -33,7 +33,7 @@ const alleEvents = await response.json();
 
         <div class="info">
           <div class="tid">
-            <img src="/img/clock.png" alt="time">
+            <img src="/img/clock(1).png" alt="time">
             <h2>{tid}</h2>
           </div>
           <div class="lokation">
@@ -52,19 +52,20 @@ const alleEvents = await response.json();
     }
     h2{
         font-size: 20px;
-        margin-left: 5%;
     }
     .h2 {
          margin-bottom: 10%;
+  
     }
     h1 {
         text-align: left;
-        margin-left: 5%
+
     }
     .info {
         text-align: left;
-        margin-left: 5%;
+        margin-left: 30%;
     }
+
     .navn {
         text-align: left;
         margin-left: 5%;
@@ -84,12 +85,24 @@ const alleEvents = await response.json();
         display: flex;
         align-items: center;
         margin-bottom: 5%;
+        gap: 1em;
+
    
      }
      .lokation {
         display: flex;
         align-items: center;
+        gap: 1em;
   
+     }
+     .navn-favorit {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        margin-bottom: 10%;
+      
      }
      }
 
@@ -117,6 +130,15 @@ const alleEvents = await response.json();
     .h2 {
         margin-bottom: 10%;
     }
+    .navn-favorit {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+        gap: 1em;
+        margin-bottom: 10%;
+      
+     }
     .billede_div {
         text-align: right;
     }
@@ -136,18 +158,11 @@ const alleEvents = await response.json();
 
      }
 
-    
-     .navn-favorit {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 2em;
-        margin-bottom: 10%;
-     }
      main {
         margin-top: 10%;
      }
-     .tid {
-        margin-left: 4px;
-     }
+     /* .info h2 {
+      margin-left: 5px;
+     } */
+
     </style>

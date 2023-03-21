@@ -118,6 +118,31 @@ import Burgermenu from "../components/burgermenu.astro";
 		max-width: 100%;
 		border: solid 6px var(--pink);
 	  }
+      header{
+      margin: 5%;
+      display: flex;
+      flex-direction: row;
+      align-items: top;
+      justify-content: center;
+    }
+     .venstre_blomstergren{
+    width: 50%;
+    margin-bottom: -45%;
+    position: absolute;
+    left: -20%;
+    top: -5%;
+    z-index: -1;
+  }
+
+  .højre_blomstergren{
+    width: 45%;
+    display: -webkit-box;
+    margin-left: auto;
+    margin-top: -25%;
+    margin-right: -15%;
+    z-index: -1;
+
+  }
     }
 
     /* desktop */
@@ -167,6 +192,24 @@ import Burgermenu from "../components/burgermenu.astro";
 		max-width: 60%;
 		border: solid 6px var(--pink);
 	  }
+     .venstre_blomstergren{
+    width: 27%;
+    margin-bottom: -45%;
+    position: absolute;
+    left: -1%;
+    top: -10%;
+    z-index: -20;
+  }
+
+  .højre_blomstergren{
+    width: 23%;
+    display: -webkit-box;
+    margin-left: auto;
+    margin-top: -20%;
+    margin-right: -5%;
+    z-index: -10;
+
+  }
     }
 
     .to_knapper {
@@ -174,8 +217,8 @@ import Burgermenu from "../components/burgermenu.astro";
       flex-direction: row;
       align-items: baseline;
       justify-content: center;
-      gap: 10%;
-      margin-top: 5%;
+      gap: 1em;
+      margin-top: -7%;
     }
     .sign_up {
       background-color: #E8D0E1;
@@ -199,23 +242,7 @@ import Burgermenu from "../components/burgermenu.astro";
 		text-align: center;
 	}
 
-  .venstre_blomstergren{
-    width: 28%;
-    margin-bottom: -25%;
-    position: absolute;
-    left: 1%;
-    top: -10%;
-    z-index: -1;
-  }
-
-  .højre_blomstergren{
-    width: 23%;
-    display: -webkit-box;
-    margin-left: auto;
-    margin-top: -20%;
-    margin-right: 0%;
-
-  }
+ 
   .knap:hover a{
     color: white;
   }
