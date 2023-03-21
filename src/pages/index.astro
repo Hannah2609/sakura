@@ -45,7 +45,7 @@ import Burgermenu from "../components/burgermenu.astro";
     </section>
 
     <div class="knap_center">
-      <Knap size="large"><a href="">Explore the 2023 pogram</a></Knap>
+      <Knap size="large"><a href="/program/">Explore the 2023 pogram</a></Knap>
     </div>
 
     <section class="booths">
@@ -54,10 +54,10 @@ import Burgermenu from "../components/burgermenu.astro";
 
       <div class="to_knapper">
         <div class="knap_center">
-          <Knap size="small"><a href="">All booths</a></Knap>
+          <Knap class="knap" size="small"><a href="">All booths</a></Knap>
         </div>
         <div class="knap_center">
-          <Knap size="small"><a href=""> Map</a></Knap>
+          <Knap class="knap" size="small"><a href=""> Map</a></Knap>
         </div>
       </div>
     </section>
@@ -70,7 +70,7 @@ import Burgermenu from "../components/burgermenu.astro";
           artist or any other connection? <br /><br /> Contact us at info@ch.mofa.go.jp
           or
         </p>
-        <Knap size="small"><a href=""> Sign Up</a></Knap>
+        <Knap class="knap" size="small"><a href=""> Sign Up</a></Knap>
       </div>
 
       <div class="img_signup">
@@ -215,6 +215,9 @@ import Burgermenu from "../components/burgermenu.astro";
     margin-top: -20%;
     margin-right: 0%;
 
+  }
+  .knap:hover a{
+    color: white;
   }
   </style>
 </html>
