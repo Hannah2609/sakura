@@ -30,6 +30,7 @@ filteredEvents.sort((a, b) => {
   {
     filteredEvents.map((event) => (
       <Card
+      link={"/events/" + event.id}
         billede={event.image}
         navn={event.name}
         arrangør={event.arrangør}

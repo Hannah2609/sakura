@@ -3,7 +3,7 @@ import "../CSS/style.css";
 const { link, billede, navn, arrangør, tid, sted } = Astro.props;
 ---
 
-<a href="/singleview/">
+<a href={link}>
   <article>
     
     <img class="image" src={"/img/Billeder/" + billede} alt="billede af event" />
