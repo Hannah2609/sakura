@@ -9,6 +9,8 @@ import kort from "../img/kort.png";
 import Blomst from "../components/blomst.astro";
 import Footer from "../components/footer.astro";
 import Japansketegn from "../components/japansketegn.astro";
+import Logo from "../components/logo.astro";
+import Burgermenu from "../components/burgermenu.astro";
 ---
 
 <html lang="en">
@@ -21,10 +23,18 @@ import Japansketegn from "../components/japansketegn.astro";
   </head>
 
   <body>
-    <Header />
+    <!-- <Header /> -->
+    <header>
+      <div>
+        <Logo />
+      </div>
+      <div>
+        <Burgermenu />
+      </div>
+    </header>
     
     <section class="hero">
-      <img class="venstre_blomstergren" src="/img/blomstergren.png" alt="Blomstergren">
+      <img class="venstre_blomstergren" src="/img/blomst-modsat.png" alt="Blomstergren">
       <Japansketegn />
       <h1 class="hero_h1">Sakura Festival</h1>
       <h2>Copenhagen 2023</h2>
@@ -118,6 +128,14 @@ import Japansketegn from "../components/japansketegn.astro";
         margin-top: 10%;
         text-align: center;
       }
+
+      header{
+      margin: 2%;
+      display: flex;
+      flex-direction: row;
+      align-items: top;
+      justify-content: center;
+    }
       h1 {
         text-align: center;
         margin-top: 5%;
@@ -182,16 +200,21 @@ import Japansketegn from "../components/japansketegn.astro";
 	}
 
   .venstre_blomstergren{
-    width: 30%;
-    transform: rotate(180deg);
+    width: 28%;
     margin-bottom: -25%;
+    position: absolute;
+    left: 1%;
+    top: -10%;
+    z-index: -1;
   }
 
   .højre_blomstergren{
-    width: 30%;
+    width: 23%;
     display: -webkit-box;
     margin-left: auto;
-    margin-top: -25%;
+    margin-top: -20%;
+    margin-right: 0%;
+
   }
   </style>
 </html>

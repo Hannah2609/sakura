@@ -19,8 +19,11 @@ import Footer from "../components/footer.astro";
   </head>
   <body>
     <Header />
-
+    <img class="venstre_blomstergren" src="/img/blomst-modsat.png" alt="Blomstergren">
     <main>
+      <img class="højre_blomstergren" src="/img/blomstergren.png" alt="Blomstergren">
+      <img class="blomster" src="/img/blomstergren.png" alt="Blomstergren">
+      <img class="blomst" src="/img/blomst-modsat.png" alt="Blomstergren">
       <h1>Program</h1>
       <div class="filter">
         <Programfilter />
@@ -45,7 +48,8 @@ import Footer from "../components/footer.astro";
   }
   
 @media (max-width:700px){
-h2 {
+
+  h2 {
     margin-left: 5%;
      font-size: 30px;
   }
@@ -63,5 +67,49 @@ h2 {
     text-align: left;
     margin: 2%;
   }
+
+  .venstre_blomstergren{
+    width: 22%;
+    margin-bottom: -25%;
+    position: absolute;
+    left: -9%;
+    top: 4%;
+    z-index: -1;
+    -webkit-transform:rotate(8deg);
+  }
+
+  .højre_blomstergren{
+    width: 22%;
+    margin-bottom: -25%;
+    position: absolute;
+    top: 0%;
+    left: 78%;
+    z-index: -1;
+    transform: scaleY(-1);
+    display: -webkit-box;
+  }
+
+  .blomst{
+    width: 23%;
+    margin-bottom: -25%;
+    position: absolute;
+    top: -18%;
+    left: 68%;
+    z-index: -2;
+    -webkit-transform:rotate(10deg);
+    margin-left: auto;
+  }
+
+  .blomster{
+    width: 24%;
+    margin-bottom: -25%;
+    position: absolute;
+    top: -10%;
+    left: 74%;
+    z-index: -2;
+    -webkit-transform:rotate(-10deg);
+    margin-left: auto;
+  }
+
 }
 </style>

@@ -4,19 +4,273 @@ import "../CSS/style.css"
 
 <div class="site-container">
     <div class="flower-container">
-      <img src="/img/mochitime.png" class="flower-image flower-image-lg" content-text= "Mochi time">
-      <img src="/img/bonsai.png" class="flower-image">
-      <img src="/img/andersonbakery.png" class="flower-image">
-      <img src="/img/saito.png" class="flower-image">
-      <img src="/img/saki.png" class="flower-image">
-      <img src="/img/sushi1.png"  class="flower-image">
-      <img src="/img/singtehus.png" class="flower-image">
-    </div>
+
+      <div class="image-container">
+          <img src="/img/mochitime.png" class="flower-image flower-image-lg"> 
+            <div class="text-overlay">
+             <h3>Mochi Time</h3>
+            </div>
+          </div> 
+
+
+            <div class="image-container">
+              <img src="/img/bonsai.png" class="flower-image">
+              <div class="text-overlay1">
+                <h3>Shiki Bonsai <br> Danmark</h3>
+              </div>
+            </div>
+
+            <div class="image-container">
+                  <img src="/img/andersonbakery.png" class="flower-image2">
+                <div class="text-overlay2">
+                  <h3>Andersen <br> bakery</h3>
+                </div>
+            </div>
+
+            <div class="image-container">
+                  <img src="/img/saito.png" class="flower-image3">
+                <div class="text-overlay3">
+                  <h3>Saito</h3>
+                </div>
+            </div>
+
+            <div class="image-container">
+                <img src="/img/saki.png" class="flower-image4">
+              <div class="text-overlay4">
+                <h3>Seidokan, <br> øl og sake</h3>
+              </div>
+            </div>
+        
+            <div class="image-container">
+              <img src="/img/sushi1.png"  class="flower-image5">
+            <div class="text-overlay5">
+              <h3>Stick’n’sushi</h3>
+            </div>
+          </div>
+          
+          <div class="image-container">
+            <img src="/img/singtehus.png" class="flower-image6">
+          <div class="text-overlay6">
+            <h3>Sing tehus</h3>
+          </div>
+        </div>
+        
+      </div>
   </div>
+
  
   
   <style>
-  .site-container {
+/* ----------- store billede ------------- */
+ .text-overlay{
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0s ease-in-out;
+  color: white;
+  font-size: 24px;
+ }
+
+ .image-container:hover .text-overlay {
+  opacity: 1;
+}
+
+/* ----------- lille billede 1 ----------- */
+
+ .text-overlay1{
+  position: absolute;
+  top: 66%;
+  left: 3%;
+  transform: translate(-50%,-50%);
+  opacity: 0;
+  transition: opacity 0s ease-in-out;
+  color: white;
+  font-size: 20px;
+ }
+
+ .image-container:hover .text-overlay1 {
+  opacity: 1;
+}
+/* ---------- lille Billede 2 ------------ */
+.text-overlay2{
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  opacity: 0;
+  transition: opacity 0s ease-in-out;
+  color: white;
+  font-size: 20px;
+ }
+ .flower-image2 {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border: solid 4px var(--pink);
+  transition: filter 0.5s ease;
+  z-index: 0;/* add this line */
+
+  width: 40%;
+  max-width: 170px;
+  height: auto;
+  top: 85%;
+  left: 50%;
+  border-radius: 50%;
+  border: solid 4px var(--pink);
+
+}
+ .flower-image2:hover {
+      filter: brightness(60%);
+    }
+
+ .image-container:hover .text-overlay2 {
+  opacity: 1;
+}
+
+/* ---------- lille Billede 3 ------------ */
+.text-overlay3{
+  position: absolute;
+  top: 14%;
+  left: 98%;
+  transform: translate(-50%,-50%);
+  opacity: 0;
+  transition: opacity 0s ease-in-out;
+  color: white;
+  font-size: 20px;
+
+ }
+ .flower-image3{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border: solid 4px var(--pink);
+  transition: filter 0.5s ease;
+  z-index: 0;/* add this line */
+
+  width: 40%;
+  max-width: 170px;
+  height: auto;
+  top: 14%;
+  left: 98%;
+  border-radius: 50%;
+  border: solid 4px var(--pink);
+ }
+
+ .flower-image3:hover {
+      filter: brightness(60%);
+    }
+
+    .image-container:hover .text-overlay3 {
+  opacity: 1;
+}
+
+/* -------- lille billede 4 --------- */
+
+.text-overlay4{
+  position: absolute;
+  top: 14%;
+  left: 2%;
+  transform: translate(-50%,-50%);
+  opacity: 0;
+  transition: opacity 0s ease-in-out;
+  color: white;
+  font-size: 20px;
+}
+.flower-image4{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border: solid 4px var(--pink);
+  transition: filter 0.5s ease;
+  z-index: 0;/* add this line */
+
+  width: 40%;
+  max-width: 170px;
+  height: auto;
+  top: 14%;
+  left: 2%;
+  border-radius: 50%;
+  border: solid 4px var(--pink);
+}
+.flower-image4:hover {
+      filter: brightness(60%);
+    }
+    .image-container:hover .text-overlay4 {
+  opacity: 1;
+}
+
+/* ----------- lille billede 5 --------- */
+.text-overlay5{
+  position: absolute;
+  top: -15%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  opacity: 0;
+  transition: opacity 0s ease-in-out;
+  color: white;
+  font-size: 20px;
+}
+
+.flower-image5{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border: solid 4px var(--pink);
+  transition: filter 0.5s ease;
+  z-index: 0;/* add this line */
+
+  width: 40%;
+  max-width: 170px;
+  height: auto;
+  top: -15%;
+  left: 50%;
+  border-radius: 50%;
+  border: solid 4px var(--pink);
+}
+.flower-image5:hover{
+  filter: brightness(60%);
+}
+.image-container:hover .text-overlay5 {
+  opacity: 1;
+}
+
+/* ------------- lille billede 6 ----------- */
+
+.text-overlay6{
+  position: absolute;
+  top: 65%;
+  left: 99%;
+  transform: translate(-50%,-50%);
+  opacity: 0;
+  transition: opacity 0s ease-in-out;
+  color: white;
+  font-size: 20px;
+}
+.flower-image6{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border: solid 4px var(--pink);
+  transition: filter 0.5s ease;
+  z-index: 0;/* add this line */
+
+  width: 40%;
+  max-width: 170px;
+  height: auto;
+  top: 65%;
+  left: 98%;
+  border-radius: 50%;
+  border: solid 4px var(--pink);
+}
+.flower-image6:hover{
+  filter: brightness(60%);
+}
+.image-container:hover .text-overlay6 {
+  opacity: 1;
+}
+
+
+
+
+
+ .site-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,8 +294,17 @@ import "../CSS/style.css"
   transform: translate(-50%, -50%);
   border: solid 4px var(--pink);
   transition: filter 0.5s ease;
-  z-index: 0; /* add this line */
+  z-index: 0;/* add this line */
+
+  width: 40%;
+  max-width: 170px;
+  height: auto;
+  top: 65%;
+  left: 2%;
+  border-radius: 50%;
+  border: solid 4px var(--pink);
 }
+
 
 .flower-image-lg {
   width: 50%;
@@ -54,67 +317,8 @@ import "../CSS/style.css"
   content: attr(data-text);
 }
 
-.flower-image:nth-child(2) {
-  width: 40%;
-  max-width: 170px;
-  height: auto;
-  top: 65%;
-  left: 2%;
-  border-radius: 50%;
-  border: solid 4px var(--pink);
-}
 
-.flower-image:nth-child(3) {
-  width: 40%;
-  max-width: 170px;
-  height: auto;
-  top: 85%;
-  left: 50%;
-  border-radius: 50%;
-  border: solid 4px var(--pink);
-}
-
-.flower-image:nth-child(4) {
-  width: 40%;
-  max-width: 170px;
-  height: auto;
-  top: 14%;
-  left: 98%;
-  border-radius: 50%;
-  border: solid 4px var(--pink);
-}
-
-.flower-image:nth-child(5) {
-  width: 40%;
-  max-width: 170px;
-  height: auto;
-  top: 14%;
-  left: 2%;
-  border-radius: 50%;
-  border: solid 4px var(--pink);
-}
-
-.flower-image:nth-child(6) {
-  width: 40%;
-  max-width: 170px;
-  height: auto;
-  top: -15%;
-  left: 50%;
-  border-radius: 50%;
-  border: solid 4px var(--pink);
-}
-
-.flower-image:nth-child(7) {
-  width: 40%;
-  max-width: 170px;
-  height: auto;
-  top: 65%;
-  left: 98%;
-  border-radius: 50%;
-  border: solid 4px var(--pink);
-   }
-
-    /* Add hover effect */
+/* Add hover effect */
     .flower-image:hover {
       filter: brightness(60%);
     }
@@ -122,7 +326,7 @@ import "../CSS/style.css"
   
 /* ----Tekst hover effect */
 
-.flower-image-lg::after {
+/* .flower-image-lg::after {
   content: attr(data-text);
   position: absolute;
   top: 50%;
@@ -134,7 +338,7 @@ import "../CSS/style.css"
   text-align: center;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
   z-index: 2;
-}
+} */
 
 
   </style>
