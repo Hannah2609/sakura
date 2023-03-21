@@ -46,9 +46,18 @@ filteredEvents.sort((a, b) => {
 </section>
 
 <style>
-  section {
+ @media (max-width: 800px) {
+    section {
+    display: flex;
+    overflow-x: scroll;
+    padding: 5%;
+  }
+  }
+  @media (min-width: 800px) {
+    section {
     display: flex;
     overflow-x: scroll;
     padding: 2%;
+  }
   }
 </style>
