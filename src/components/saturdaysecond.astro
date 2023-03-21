@@ -20,7 +20,6 @@ filteredEvents.sort((a, b) => {
 
   const aTime = new Date(`1970-01-01T${a.tidspunkt}`);
   const bTime = new Date(`1970-01-01T${b.tidspunkt}`);
-
  
   return aTime - bTime;
 });
