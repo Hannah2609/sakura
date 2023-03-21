@@ -15,7 +15,7 @@ const options = {
 const response = await fetch(url, options);
 const alleEvents = await response.json();
 
-const filteredEvents = alleEvents.filter((event) => event.dag === "Saturday" && event.placering === "Main stage");
+const filteredEvents = alleEvents.filter((event) => event.dag === "Saturday" && event.placering === "Second stage");
 filteredEvents.sort((a, b) => {
 
   const aTime = new Date(`1970-01-01T${a.tidspunkt}`);
